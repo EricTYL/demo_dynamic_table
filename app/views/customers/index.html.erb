@@ -1,0 +1,22 @@
+<table>
+        <thead>
+                <tr>
+                        <td>顧客姓名</td>
+                        <td>年齡</td>
+                        <% @items_list.each do |item| %>
+                                <td><%= item %></td>
+                        <% end %>
+                </tr>
+        </thead>
+        <tbody>
+                <% @customers.each do |customer| %>
+                        <tr>
+                                <td><%= customer.name %></td>
+                                <td><%= customer.age %></td>
+                                <% @items_list.each do |item| %>
+                                        <td><%= customer.items[item] %></td>
+                                <% end %>
+                        </tr>
+                <% end %>
+        </tbody>
+</table>
